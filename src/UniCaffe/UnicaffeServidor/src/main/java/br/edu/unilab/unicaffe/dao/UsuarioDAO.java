@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import java.util.Collection;
 import java.util.HashSet;
 
+import br.edu.unilab.unicaffe.api.Resource;
 import br.edu.unilab.unicaffe.model.Usuario;
 
 /**
@@ -113,6 +114,7 @@ public class UsuarioDAO extends DAO {
 
 	public boolean autentica(Usuario usuario) {
 		if (this.autenticaLocal(usuario)) {
+			System.out.println("Usuario Autenticado Localmente: "+usuario.getId());
 			return true;
 		}
 		try {
@@ -121,7 +123,7 @@ public class UsuarioDAO extends DAO {
 			e1.printStackTrace();
 		}
 		
-		this.setTipoDeConexao(TIPO_AUTENTICACAO);
+		this.setTipoDeConexao(TIPO_USUARIOS);
 		this.fazerConexao();
 		if (this.autenticaRemoto(usuario)) {
 			try {
@@ -132,6 +134,7 @@ public class UsuarioDAO extends DAO {
 			}
 			this.setTipoDeConexao(TIPO_DEFAULT);
 			this.fazerConexao();
+			
 			this.cadastra(usuario);
 			try {
 				this.getConexao().close();
@@ -159,15 +162,22 @@ public class UsuarioDAO extends DAO {
 	 */
 	public boolean autenticaRemoto(Usuario usuario) {
 
-		this.setTipoDeConexao(TIPO_AUTENTICACAO);
+		Resource resource = new Resource();
+		int id = resource.authenticate(usuario);
+		if(id == 0) {
+			return false;
+		}
+		System.out.println("Usuario autenticado pela API: "+id);
+		
+		this.setTipoDeConexao(TIPO_USUARIOS);
 
 		try {
 			PreparedStatement ps = this.getConexao()
-					.prepareStatement("SELECT * FROM usuarios_unicafe WHERE login = ? AND senha = ?");
-			ps.setString(1, usuario.getLogin());
-			ps.setString(2, usuario.getSenha());
+					.prepareStatement("SELECT * FROM vw_usuarios_unicafe WHERE id_usuario = ? LIMIT 1");
+			ps.setInt(1, id);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
+				System.out.println("Usuario autenticado pela API localizado na base remota de usuarios");
 				usuario.setIdBaseExterna(rs.getInt("id_usuario"));
 				usuario.setId(rs.getInt("id_usuario"));
 				usuario.setNome(rs.getString("nome"));
@@ -194,12 +204,13 @@ public class UsuarioDAO extends DAO {
 	 */
 	public boolean cadastra(Usuario usuario) {
 		try {
+			System.out.println("Localizando usuario para cadastrar ou atualizar: "+usuario.getLogin());
 			PreparedStatement ps = this.getConexao().prepareStatement("SELECT * FROM usuario WHERE login = ? ");
 
 			ps.setString(1, usuario.getLogin());
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
-				
+				System.out.println("Atualizando Senha do Usuario na base Local: "+usuario.getLogin());
 				PreparedStatement psUpdate = this.getConexao()
 						.prepareStatement("UPDATE usuario set senha = ? WHERE login = ?");
 				psUpdate.setString(1, usuario.getSenha());
@@ -210,6 +221,7 @@ public class UsuarioDAO extends DAO {
 
 				return false;
 			}
+			System.out.println("Inserir novo usuario na base local: "+usuario.getNome());
 			// nome email login senha nivel_acesso
 			PreparedStatement ps2 = this.getConexao().prepareStatement(
 					"INSERT into usuario(nome, email, login, senha, id_base_externa, nivel_acesso) VALUES(?, ?, ?, ?, ?, ?)");

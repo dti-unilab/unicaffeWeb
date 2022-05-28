@@ -14,6 +14,6 @@ public class MainServidor {
 	 */
 	public static void main(String[] args) {
 		ServidorController servidor = new ServidorController();
-		servidor.iniciaServico();
+		servidor.iniciaServico();		
 	}
 }

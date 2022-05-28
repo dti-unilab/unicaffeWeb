@@ -9,6 +9,14 @@ package br.edu.unilab.unicaffe.model;
  */
 
 public class Usuario {
+	private String name;
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getName() {
+		return this.name; 
+	}
 	/**
 	 * ID do usuário no banco de dados. 
 	 */
@@ -32,6 +40,7 @@ public class Usuario {
 	/**
 	 * Nível de acesso do usuário.
 	 */
+	
 	private int nivelAcesso;
 	/**
 	 * ID do usuário na base de origem. 
