@@ -1960,3 +1960,52 @@ C:\Windows\system32\lpremove.exe,lpremove.exe
 ,lpksetup.exe
 C:\Program Files\AdoptOpenJDK\jre-8.0.292.10-hotspot\bin\javaw.exe,javaw.exe
 C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2205.7-0\MpCmdRun.exe,MpCmdRun.exe
+C:\Program Files\AdoptOpenJDK\jre-8.0.292.10-hotspot\bin\javaw.exe,javaw.exe
+C:\Program Files (x86)\AnyDesk\AnyDesk.exe,AnyDesk.exe
+C:\Windows\SysWOW64\OneDriveSetup.exe,OneDriveSetup.exe
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2205.7-0\MpCmdRun.exe,MpCmdRun.exe
+C:\Program Files (x86)\Foxit Software\Foxit PDF Reader\FoxitPDFReaderUpdateService.exe,FoxitPDFReaderUpdateService.exe
+C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe,MicrosoftEdgeUpdate.exe
+C:\Windows\SoftwareDistribution\Download\Install\updateplatform.exe,updateplatform.exe
+C:\Windows\TEMP\99EF40D8-B1C2-48C9-948D-5765DC375671\MpSigStub.exe,MpSigStub.exe
+C:\Program Files\WindowsApps\Microsoft.YourPhone_1.22042.168.0_x64__8wekyb3d8bbwe\YourPhone.exe,YourPhone.exe
+C:\Program Files (x86)\Brother\ControlCenter3\brccMCtl.exe,BrccMCtl.exe
+C:\Windows\system32\netsh.exe,netsh.exe
+C:\Program Files\Microsoft Update Health Tools\uhssvc.exe,uhssvc.exe
+,MpCmdRun.exe
+,MpCmdRun.exe
+C:\Windows\system32\wevtutil.exe,wevtutil.exe
+,MpCmdRun.exe
+,MpCmdRun.exe
+C:\Windows\SoftwareDistribution\Download\Install\AM_Engine.exe,AM_Engine.exe
+C:\Program Files\WindowsApps\microsoft.windowscommunicationsapps_16005.14326.20970.0_x64__8wekyb3d8bbwe\HxTsr.exe,HxTsr.exe
+C:\Program Files\WindowsApps\microsoft.windowscommunicationsapps_16005.14326.20970.0_x64__8wekyb3d8bbwe\HxTsr.exe,HxTsr.exe
+C:\Program Files (x86)\Google\Update\1.3.36.152\GoogleCrashHandler.exe,GoogleCrashHandler.exe
+C:\Program Files (x86)\Google\Update\1.3.36.152\GoogleCrashHandler64.exe,GoogleCrashHandler64.exe
+C:\Windows\winsxs\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.17134.1000_none_c3ee9a56696ad61e\TiWorker.exe,TiWorker.exe
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\NGenTask.exe,ngentask.exe
+C:\Program Files (x86)\Google\Update\1.3.36.152\GoogleCrashHandler.exe,GoogleCrashHandler.exe
+C:\Program Files (x86)\Google\Update\1.3.36.152\GoogleCrashHandler64.exe,GoogleCrashHandler64.exe
+C:\Program Files\WindowsApps\Microsoft.SkypeApp_14.56.102.0_x64__kzf8qxf38zg5c\SkypeApp.exe,SkypeApp.exe
+C:\Program Files (x86)\Google\Update\1.3.36.152\GoogleCrashHandler.exe,GoogleCrashHandler.exe
+C:\Program Files (x86)\Google\Update\1.3.36.152\GoogleCrashHandler64.exe,GoogleCrashHandler64.exe
+C:\Program Files (x86)\Microsoft Office\Office15\msohtmed.exe,MSOHTMED.EXE
+C:\Program Files\ruxim\ruximics.exe,RUXIMICS.exe
+C:\Windows\SysWOW64\attrib.exe,attrib.exe
+C:\Windows\SysWOW64\attrib.exe,attrib.exe
+C:\Program Files (x86)\Google\Update\1.3.36.152\GoogleCrashHandler.exe,GoogleCrashHandler.exe
+C:\Program Files (x86)\Google\Update\1.3.36.152\GoogleCrashHandler64.exe,GoogleCrashHandler64.exe
+C:\Program Files\WindowsApps\microsoft.windowscommunicationsapps_16005.14326.20970.0_x64__8wekyb3d8bbwe\HxTsr.exe,HxTsr.exe
+,WerFault.exe
+C:\Windows\System32\LocationNotificationWindows.exe,LocationNotificationWindows.exe
+C:\Program Files (x86)\Google\Update\1.3.36.152\GoogleCrashHandler.exe,GoogleCrashHandler.exe
+C:\Program Files (x86)\Google\Update\1.3.36.152\GoogleCrashHandler64.exe,GoogleCrashHandler64.exe
+C:\Windows\System32\UNP\UpdateNotificationMgr.exe,UpdateNotificationMgr.exe
+C:\Program Files (x86)\Google\Update\1.3.36.152\GoogleCrashHandler.exe,GoogleCrashHandler.exe
+C:\Program Files (x86)\Google\Update\1.3.36.152\GoogleCrashHandler64.exe,GoogleCrashHandler64.exe
+C:\Program Files (x86)\Google\Update\1.3.36.152\GoogleCrashHandler.exe,GoogleCrashHandler.exe
+C:\Program Files (x86)\Google\Update\1.3.36.152\GoogleCrashHandler64.exe,GoogleCrashHandler64.exe
+C:\Program Files\WindowsApps\microsoft.windowscommunicationsapps_16005.14326.20970.0_x64__8wekyb3d8bbwe\HxTsr.exe,HxTsr.exe
+C:\Program Files (x86)\Google\Update\1.3.36.152\GoogleCrashHandler.exe,GoogleCrashHandler.exe
+C:\Program Files (x86)\Google\Update\1.3.36.152\GoogleCrashHandler64.exe,GoogleCrashHandler64.exe
+C:\Windows\System32\UNP\UpdateNotificationMgr.exe,UpdateNotificationMgr.exe
