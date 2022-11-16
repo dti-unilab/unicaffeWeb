@@ -15,3 +15,5 @@
 *.zip
 *.exe
 log_logado.txt
+/src/UniCaffe/UniCaffeCliente/log.log
+/src/UniCaffe/UniCaffeCliente/src/main/java/br/edu/unilab/unicaffe/main/MainTest.java
