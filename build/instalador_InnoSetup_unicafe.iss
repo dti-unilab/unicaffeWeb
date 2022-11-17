@@ -37,7 +37,7 @@ Source: "UniCafeClient.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "papel-de-parede.jpg"; DestDir:"C:\Windows\Web\Wallpaper\Windows"; Flags: ignoreversion;
 Source: "install.bat"; DestDir: "{app}"; Flags: ignoreversion;
 Source: "..\src\UniCaffe\UniCaffeUpdate\target\unicafe-update.jar"; DestDir: "{app}"; Flags: ignoreversion;
-Source: "..\src\UniCaffe\UniCaffeCliente\config.ini"; DestDir: "{app}"; Flags: ignoreversion;
+Source: "config_unilab\config.ini"; DestDir: "{app}"; Flags: ignoreversion;
 Source: "..\src\UniCaffe\UniCaffeCliente\permitidos.txt"; DestDir: "{app}"; Flags: ignoreversion;
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
