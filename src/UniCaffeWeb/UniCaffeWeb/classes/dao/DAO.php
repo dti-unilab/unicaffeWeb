@@ -9,7 +9,7 @@ class DAO {
      * @var string
      * Path do arquivo de configuração do banco de dados. 
      */
-	const ARQUIVO_CONFIGURACAO = "/dados/unicaffe/unicaffe_bd.ini";
+	const ARQUIVO_CONFIGURACAO = "./unicaffe_bd.ini";
 	/**
 	 * @var integer
 	 * Indica conexão com o UniCaffé Servidor. 
