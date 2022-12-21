@@ -27,7 +27,6 @@ class MainIndexController{
 <title>UniCaffeWeb</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!-- meta tag para responsividade em Windows e Linux -->
-<link rel="stylesheet" href="css_spa/spa.css" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/maquina.css" />
 <link rel="stylesheet" href="css/new_maquina.css" />
