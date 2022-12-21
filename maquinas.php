@@ -1,18 +1,26 @@
 <?php
-include_once 'classes/controller/LaboratorioController.php';
-include_once 'classes/controller/MaquinaController.php';
-include_once 'classes/view/MaquinaView.php';
-include_once 'classes/model/Laboratorio.php';
-include_once 'classes/model/Maquina.php';
-include_once 'classes/model/Usuario.php';
-include_once 'classes/model/Acesso.php';
-include_once 'classes/dao/DAO.php';
-include_once 'classes/dao/LaboratorioDAO.php';
-include_once 'classes/dao/MaquinaDAO.php';
-include_once 'classes/dao/UniCaffe.php';
-include_once 'classes/view/LaboratorioView.php';
-include_once 'classes/util/Sessao.php';
-include_once 'classes/model/Perfil.php';
+
+
+function autoload($classe) {
+
+    $prefix = 'unicaffeWeb';
+    $base_dir = 'unicaffeWeb';
+    $len = strlen($prefix);
+    if (strncmp($prefix, $classe, $len) !== 0) {
+        return;
+    }
+    $relative_class = substr($classe, $len);
+    $file = $base_dir . str_replace('\\', '/', $relative_class) . '.php';
+    if (file_exists($file)) {
+        require $file;
+    }
+
+}
+spl_autoload_register('autoload');
+
+use unicaffeWeb\controller\MaquinaController;
+use unicaffeWeb\util\Sessao;
+
 
 $sessao = new Sessao ();
 MaquinaController::main($sessao->getNivelAcesso());
