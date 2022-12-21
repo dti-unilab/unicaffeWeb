@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use unicaffeWeb\controller\MainIndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $main = new MainIndexController();
+    $main->main();
+})->name('root');
+
+Route::post('/', function () {
+    
+    $main = new MainIndexController();
+    $main->main();
+})->name('root-post');
+

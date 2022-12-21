@@ -27,35 +27,13 @@ class MainIndexController{
 <title>UniCaffeWeb</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!-- meta tag para responsividade em Windows e Linux -->
-<link rel="stylesheet" href="css_spa/spa.css" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/maquina.css" />
 <link rel="stylesheet" href="css/new_maquina.css" />
 <link rel="stylesheet" type="text/css" href="css/context.standalone.css" />
 <script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/cookie.js"></script>
-<script type="text/javascript" src="js/contraste.js"></script>
 </head>
 <body>
-		<div id="barra-governo">
-			<div class="resolucao config">
-				<div class="a-esquerda">
-					<a href="http://brasil.gov.br/" target="_blank"><span id="bandeira"></span><span>BRASIL</span></a>
-					<a href="http://acessoainformacao.unilab.edu.br/" target="_blank">Acesso
-						&agrave;  informa&ccedil;&atilde;o</a>
-				</div>
-				<div class="a-direita">
-					<a href="#"><i class="icone-menu"></i></a>
-				</div>
-				<ul>
-					<li><a href="http://brasil.gov.br/barra#participe" target="_blank">Participe</a></li>
-					<li><a href="http://www.servicos.gov.br/" target="_blank">Servi&ccedil;os</a></li>
-					<li><a href="http://www.planalto.gov.br/legislacao" target="_blank">Legisla&ccedil;&atilde;o</a></li>
-					<li><a href="http://brasil.gov.br/barra#orgaos-atuacao-canais"
-						target="_blank">Canais</a></li>
-				</ul>
-			</div>
-		</div>
 
 	<div class="pagina doze colunas">
 		<div class="topo doze linha fundo-branco">
@@ -301,10 +279,6 @@ class MainIndexController{
 				    echo '<br><a href="downloads/guiadousuariounicaffe.pdf" target="blank">Guia do Usu&aacute;rio UniCaffé</a>';
 				    echo '</div>';
 				    echo '</div>';
-				    break;
-				case 'bloqueio':
-				    $bloqueioController = new BloqueioController();
-				    $bloqueioController->cadastrar($sessao->getIdUsuario());
 				    break;
 				case 'perfil':
 				    PerfilController::main($sessao->getNivelAcesso());
