@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use unicaffeWeb\controller\MainIndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,5 +23,18 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::view('/{path?}', 'reactapp')
-    ->where('path', '.*');
+
+//App react
+// Route::view('/{path?}', 'reactapp')
+//     ->where('path', '.*');
+
+Route::get('/', function () {
+    $main = new MainIndexController();
+    $main->main();
+})->name('root');
+Route::post('/', function () {
+    
+    $main = new MainIndexController();
+    $main->main();
+})->name('root-post');
+
